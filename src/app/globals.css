@@ -2,10 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * 글로벌 CSS
+ * Design Guide (docs/design-guide.md) 기반 - Single Source of Truth
+ */
+
 :root {
+  /* Design Guide 8. UI 컴포넌트 */
   --header-height: 64px;
   --footer-height: 80px;
   --content-max-width: 1280px;
+  
+  /* Design Guide 3. 색상 */
+  --color-primary: #004B8D;
+  --color-secondary: #48A9C5;
+  --color-accent: #10B981;
+  --color-background: #FFFFFF;
+  --color-surface: #F6F8FA;
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #6B7280;
+  --color-border: #E5E7EB;
 }
 
 * {
@@ -20,7 +36,9 @@ html {
 }
 
 body {
-  font-family: "Inter", "Pretendard", sans-serif;
-  background-color: #F8FAFC;
-  color: #1E293B;
+  /* Design Guide 4. 타이포그래피 */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Design Guide 3. 색상 - 정확한 값 */
+  background-color: var(--color-background); /* #FFFFFF */
+  color: var(--color-text-primary); /* #1F2937 */
 }
