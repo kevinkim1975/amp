@@ -7,6 +7,7 @@ import React from 'react';
 import type { SectionProps, SectionType } from '@/types';
 import { cn } from '@/lib/utils';
 import { Section01Cover } from './Section01Cover';
+import { Section02TOC } from './Section02TOC';
 
 /** 섹션 타입별 한국어 라벨 */
 const TYPE_LABELS: Record<SectionType, string> = {
@@ -43,7 +44,7 @@ const Placeholder = ({ section }: SectionProps) => {
 /** 섹션 ID별 컴포넌트 매핑 */
 const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   1: Section01Cover,
-  // 2: Section02TOC,
+  2: Section02TOC,
   // 3: Section03Overview,
   // ... 추후 섹션 추가
 };
