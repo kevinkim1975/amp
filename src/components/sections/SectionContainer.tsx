@@ -1,6 +1,8 @@
 /**
  * SectionContainer - 섹션 컨테이너
  * Boris Cherny 원칙: 섹션 ID에 따라 해당 콘텐츠 컴포넌트 렌더링
+ * 
+ * 변경: 2026-01-13 - Section04Channel 추가 (18페이지 구조)
  */
 
 import React from 'react';
@@ -9,6 +11,7 @@ import { cn } from '@/lib/utils';
 import { Section01Cover } from './Section01Cover';
 import { Section02TOC } from './Section02TOC';
 import { Section03Diagnosis } from './Section03Diagnosis';
+import { Section04Channel } from './Section04Channel';
 
 /** 섹션 타입별 한국어 라벨 */
 const TYPE_LABELS: Record<SectionType, string> = {
@@ -47,7 +50,9 @@ const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   1: Section01Cover,
   2: Section02TOC,
   3: Section03Diagnosis,
-  // 4: Section04MarketAnalysis,
+  4: Section04Channel,
+  // 5: Section05Keyword,
+  // 6: Section06CompetitorOverview,
   // ... 추후 섹션 추가
 };
 

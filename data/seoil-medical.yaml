@@ -1,6 +1,7 @@
 # 서일메디컬 제안서 - YAML 데이터
 # 생성일: 2026-01-12
 # 변환일: 2026-01-12
+# 수정일: 2026-01-13 - 17페이지 → 18페이지 (Section 3 분리)
 # 형식: pages[] 배열 (md-spec.md v1.1.0 준수)
 # 원본: seoil-medical-backup.yaml (멀티문서 형식)
 
@@ -75,6 +76,11 @@ pages:
                 - 부산대학교병원 성형외과 교수 경력
                 - 재건성형 + 미용성형 통합 진료
                 - 대학병원 수준 전문성 + 개인병원 접근성/가격 경쟁력
+  - page: 4
+    type: content
+    data:
+      section: 1. 서일메디컬 현황 진단 - 마케팅 채널
+      blocks:
         - type: table
           title: 현재 마케팅 채널 운영 현황
           summary: 총 562만원
@@ -117,7 +123,7 @@ pages:
               status: ● 운영중
               budget: 55만원
               issue: 제작
-  - page: 4
+  - page: 5
     type: content
     data:
       section: 2. 바이럴 키워드 노출 현황 분석
@@ -187,7 +193,7 @@ pages:
             - "재건성형: 일부 키워드 노출 → 유지 및 강화 필요"
             - "미용성형: 부산 지역 키워드 점유율 0% → 신규 진입 필요"
             - 경쟁사(하늘성형외과)가 대부분의 키워드 상위 점유 중
-  - page: 5
+  - page: 6
     type: content
     data:
       section: 3. 경쟁사 분석 - 경쟁 구도 개요
@@ -222,7 +228,7 @@ pages:
           items:
             - "재건성형: 대학병원급 전문성 + 개인병원 접근성 → 차별화 가능"
             - "미용성형: 온라인 노출 0% → 신규 진입 전략 필요"
-  - page: 6
+  - page: 7
     type: content
     data:
       section: 3.2 재건성형 경쟁사 분석 - 대학병원
@@ -285,7 +291,7 @@ pages:
               - status: full
                 text: 재건+미용 통합 → 원스톱 진료
               - text: → 대학병원 온라인 소극적 = 키워드 선점 기회
-  - page: 7
+  - page: 8
     type: content
     data:
       section: 3.3 미용성형 경쟁사 분석 - 부산 지역
@@ -366,7 +372,7 @@ pages:
           variant: warning
           title: 서일메디컬 현황
           content: "채널 수: 1 / 전후사진: ✕ / 점유율: 0% → 다채널 전략 + 콘텐츠 차별화 필요"
-  - page: 8
+  - page: 9
     type: content
     data:
       section: 3.4 서일메디컬 현황 진단
@@ -453,7 +459,7 @@ pages:
                 - label: 갤럭시
                   value: 60
           insight: 실력은 최상위권이나 온라인에서 알려지지 않음
-  - page: 9
+  - page: 10
     type: content
     data:
       section: 4. 포지셔닝 분석 - 재건성형 시장
@@ -503,7 +509,7 @@ pages:
             - 부산대 교수 출신 → 대학병원급 기술력 어필 가능
             - 빠른 예약, 개인 맞춤 상담 → 대학병원 대비 차별화
             - 대학병원들 온라인 마케팅 소극적 → 키워드 선점 기회
-  - page: 10
+  - page: 11
     type: content
     data:
       section: 4. 포지셔닝 분석 - 미용성형 시장 (부산 지역)
@@ -553,7 +559,7 @@ pages:
             - "\"재건+미용 결합\" 포지셔닝으로 차별화 (재건 기술력 = 미용 품질 신뢰)"
             - 지식인/언론보도 통해 전문성·안전성 메시지 우선 확산
             - "중장기: 전후사진 확보 후 본격적인 점유율 경쟁 진입"
-  - page: 11
+  - page: 12
     type: content
     data:
       section: 5. 핵심 문제점 진단
@@ -629,7 +635,7 @@ pages:
               description: 중기 과제
               x: 75
               "y": 30
-  - page: 12
+  - page: 13
     type: content
     data:
       section: 6. 전략 제안 - 전후사진 확보 전략 (최우선)
@@ -675,7 +681,7 @@ pages:
         - type: callout
           variant: insight
           content: "핵심 메시지: 사진 확보는 중장기 과제, 당장은 대체 콘텐츠로 전문성 어필"
-  - page: 13
+  - page: 14
     type: content
     data:
       section: 6. 전략 제안 - 채널별 전략
@@ -732,7 +738,7 @@ pages:
                   items:
                     - 사진 없는 카페 작업은 효율 제한
                     - 카페는 후기/사진 기반 채널
-  - page: 14
+  - page: 15
     type: content
     data:
       section: 7. 마케팅 예산안 - 옵션별 비교
@@ -820,7 +826,7 @@ pages:
           items:
             - 카페 예산 → 지식인 재배분으로 효율 개선
             - 전후사진 확보 후 카페 재활성화 + 예산 확장 검토
-  - page: 15
+  - page: 16
     type: content
     data:
       section: 8. 향후 확장 방향
@@ -871,7 +877,7 @@ pages:
                 - 전후사진 갤러리 (확보 후)
                 - 시술 성과 및 치료 사례 개발
           footer: ※ 홈페이지 개선은 본 제안서 범위 외이며, 필요 시 별도 진단 및 제안 가능
-  - page: 16
+  - page: 17
     type: content
     data:
       section: 9. 요약 및 권장사항
@@ -911,7 +917,7 @@ pages:
               details:
                 - 카페 예산 → 지식인 + 언론보도로 전환
                 - 블로그는 기존 대행사와 협업 구조
-  - page: 17
+  - page: 18
     type: closing
     data:
       title: 감사합니다
