@@ -34,9 +34,9 @@
 
 | 순서 | Sub-Phase | 작업 | 검증 방법 | 상태 |
 |------|-----------|------|-----------|------|
-| 0 | **1-0** | GitHub 저장소 + Vercel 연결 | Vercel 대시보드 연결 확인 | ⬜ |
-| 1 | **1-A** | 프로젝트 파일 구조 생성 | Vercel 빌드 성공 | ⬜ |
-| 2 | **1-B** | 타입 정의 (types/index.ts) | Vercel 빌드 성공 | ⬜ |
+| 0 | **1-0** | GitHub 저장소 + Vercel 연결 | Vercel 대시보드 연결 확인 | ✅ 완료 |
+| 1 | **1-A** | 프로젝트 파일 구조 생성 | Vercel 빌드 성공 | ✅ 완료 |
+| 2 | **1-B** | 타입 정의 (types/index.ts) | Vercel 빌드 성공 | ⬜ ⭐현재 |
 | 3 | **1-C** | TopbarHeader 컴포넌트 | Vercel URL에서 헤더 표시 | ⬜ |
 | 4 | **1-D** | ProgressFooter 컴포넌트 | Vercel URL에서 푸터 표시 | ⬜ |
 | 5 | **1-E** | 페이지 통합 + 17개 섹션 | Vercel URL에서 스크롤 동작 | ⬜ |
