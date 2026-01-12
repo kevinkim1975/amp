@@ -64,25 +64,25 @@ export interface SectionProps {
 // 5. 상수 데이터 (as const)
 // ============================================
 
-/** 17개 섹션 정의 */
+/** 17개 섹션 정의 (YAML 데이터와 동기화) */
 export const SECTIONS: readonly Section[] = [
   { id: 1, type: 'cover', title: '표지' },
   { id: 2, type: 'toc', title: '목차' },
-  { id: 3, type: 'content', title: '제안 개요' },
-  { id: 4, type: 'content', title: '의료 시장 현황' },
-  { id: 5, type: 'content', title: '서일메디컬 현황' },
-  { id: 6, type: 'content', title: '경쟁사 분석' },
-  { id: 7, type: 'content', title: 'SWOT 분석' },
-  { id: 8, type: 'content', title: '핵심 전략' },
-  { id: 9, type: 'content', title: '브랜드 포지셔닝' },
-  { id: 10, type: 'content', title: '디지털 마케팅' },
-  { id: 11, type: 'content', title: '콘텐츠 전략' },
-  { id: 12, type: 'content', title: '고객 여정 설계' },
-  { id: 13, type: 'content', title: 'CRM 구축 방안' },
-  { id: 14, type: 'content', title: '실행 로드맵' },
-  { id: 15, type: 'content', title: '예상 성과' },
-  { id: 16, type: 'content', title: '투자 비용' },
-  { id: 17, type: 'closing', title: '마무리' },
+  { id: 3, type: 'content', title: '1. 서일메디컬 현황 진단' },
+  { id: 4, type: 'content', title: '2. 바이럴 키워드 노출 현황 분석' },
+  { id: 5, type: 'content', title: '3. 경쟁사 분석 - 경쟁 구도 개요' },
+  { id: 6, type: 'content', title: '3.2 재건성형 경쟁사 분석' },
+  { id: 7, type: 'content', title: '3.3 미용성형 경쟁사 분석' },
+  { id: 8, type: 'content', title: '3.4 서일메디컬 현황 진단' },
+  { id: 9, type: 'content', title: '4. 포지셔닝 분석 - 재건성형' },
+  { id: 10, type: 'content', title: '4. 포지셔닝 분석 - 미용성형' },
+  { id: 11, type: 'content', title: '5. 핵심 문제점 진단' },
+  { id: 12, type: 'content', title: '6. 전략 제안 - 전후사진 확보' },
+  { id: 13, type: 'content', title: '6. 전략 제안 - 채널별 전략' },
+  { id: 14, type: 'content', title: '7. 마케팅 예산안' },
+  { id: 15, type: 'content', title: '8. 향후 확장 방향' },
+  { id: 16, type: 'content', title: '9. 요약 및 권장사항' },
+  { id: 17, type: 'closing', title: '감사합니다' },
 ] as const;
 
 /** 총 섹션 수 */
