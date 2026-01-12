@@ -8,6 +8,7 @@ import type { SectionProps, SectionType } from '@/types';
 import { cn } from '@/lib/utils';
 import { Section01Cover } from './Section01Cover';
 import { Section02TOC } from './Section02TOC';
+import { Section03Diagnosis } from './Section03Diagnosis';
 
 /** 섹션 타입별 한국어 라벨 */
 const TYPE_LABELS: Record<SectionType, string> = {
@@ -45,7 +46,8 @@ const Placeholder = ({ section }: SectionProps) => {
 const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   1: Section01Cover,
   2: Section02TOC,
-  // 3: Section03Overview,
+  3: Section03Diagnosis,
+  // 4: Section04MarketAnalysis,
   // ... 추후 섹션 추가
 };
 

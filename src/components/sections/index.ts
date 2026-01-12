@@ -6,6 +6,7 @@
 export { SectionContainer } from './SectionContainer';
 export { Section01Cover } from './Section01Cover';
 export { Section02TOC } from './Section02TOC';
+export { Section03Diagnosis } from './Section03Diagnosis';
 
 // 향후 추가될 섹션들
-// export { Section03Overview } from './Section03Overview';
+// export { Section04MarketAnalysis } from './Section04MarketAnalysis';
