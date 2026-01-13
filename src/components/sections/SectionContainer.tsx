@@ -2,7 +2,7 @@
  * SectionContainer - 섹션 컨테이너
  * Boris Cherny 원칙: 섹션 ID에 따라 해당 콘텐츠 컴포넌트 렌더링
  * 
- * 변경: 2026-01-13 - Section04Channel 추가 (18페이지 구조)
+ * 변경: 2026-01-13 - Section06Competition 추가
  */
 
 import React from 'react';
@@ -13,6 +13,7 @@ import { Section02TOC } from './Section02TOC';
 import { Section03Diagnosis } from './Section03Diagnosis';
 import { Section04Channel } from './Section04Channel';
 import { Section05Keywords } from './Section05Keywords';
+import { Section06Competition } from './Section06Competition';
 
 /** 섹션 타입별 한국어 라벨 */
 const TYPE_LABELS: Record<SectionType, string> = {
@@ -53,8 +54,8 @@ const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   3: Section03Diagnosis,
   4: Section04Channel,
   5: Section05Keywords,
-  // 6: Section06CompetitorOverview,
-  // ... 추후 섹션 추가
+  6: Section06Competition,
+  // 7-17: 추후 추가
 };
 
 export const SectionContainer = React.forwardRef<HTMLElement, SectionProps>(
