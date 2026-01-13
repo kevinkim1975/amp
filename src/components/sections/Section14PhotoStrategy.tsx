@@ -33,9 +33,9 @@ export function Section14PhotoStrategy() {
           </div>
         </div>
 
-        {/* Two Column Strategy - flex-1로 공간 흡수 */}
-        <div className="flex-1 mb-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 h-full">
+        {/* Two Column Strategy - flexbox chain 유지 */}
+        <div className="flex-1 flex flex-col mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 flex-1">
             {/* 사진 확보 방안 */}
             <div className="flex flex-col bg-white border border-[#E5E7EB] rounded-md overflow-hidden">
               <div className="bg-[#004B8D] px-4 py-2 flex items-center gap-2">
