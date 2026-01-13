@@ -4,7 +4,7 @@
  * 
  * 생성: 2026-01-13
  * 개선: 30년차 디자이너 레이아웃 최적화
- * - 상단 정렬로 빈 공간 제거
+ * - min-h 유지 + justify-start로 상단 정렬
  * - 테이블 폰트 크기 증가 (xs → sm)
  * - 여백 최적화로 시각적 밀도 향상
  * 
@@ -158,9 +158,9 @@ export function Section05Keywords() {
 
   return (
     <section className="w-full bg-background py-8">
-      {/* 상단 정렬, justify-center 제거로 빈 공간 해결 */}
-      <div className="mx-auto max-w-content px-6">
-        {/* Section Header - 여백 축소 */}
+      {/* min-h 유지 + justify-start로 상단 정렬 (다음 섹션 침범 방지) */}
+      <div className="mx-auto max-w-content px-6 min-h-[calc(100vh-144px)] flex flex-col justify-start">
+        {/* Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-heading-2 text-primary mb-2">
             {data.section}
@@ -171,14 +171,14 @@ export function Section05Keywords() {
           />
         </div>
 
-        {/* 2열 테이블 그리드 - gap 증가 */}
+        {/* 2열 테이블 그리드 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {data.tables.map((table) => (
             <KeywordTable key={table.title} table={table} />
           ))}
         </div>
 
-        {/* Callout: 시사점 - 패딩 및 폰트 크기 증가 */}
+        {/* Callout: 시사점 */}
         <div className="p-6 bg-gradient-to-r from-surface to-background border-l-4 border-primary rounded-r-lg shadow-sm">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-primary/10 rounded-lg">
