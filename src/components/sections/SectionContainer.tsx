@@ -12,6 +12,7 @@ import { Section01Cover } from './Section01Cover';
 import { Section02TOC } from './Section02TOC';
 import { Section03Diagnosis } from './Section03Diagnosis';
 import { Section04Channel } from './Section04Channel';
+import { Section05Keywords } from './Section05Keywords';
 
 /** 섹션 타입별 한국어 라벨 */
 const TYPE_LABELS: Record<SectionType, string> = {
@@ -51,7 +52,7 @@ const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   2: Section02TOC,
   3: Section03Diagnosis,
   4: Section04Channel,
-  // 5: Section05Keyword,
+  5: Section05Keywords,
   // 6: Section06CompetitorOverview,
   // ... 추후 섹션 추가
 };

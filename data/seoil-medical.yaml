@@ -123,10 +123,12 @@ pages:
               status: ● 운영중
               budget: 55만원
               issue: 제작
+  # 2026-01-13: page 5를 5, 6으로 분리 (19페이지 구조)
   - page: 5
     type: content
     data:
       section: 2. 바이럴 키워드 노출 현황 분석
+      subtitle: 재건성형 키워드
       blocks:
         - type: table
           title: 재건성형 키워드 (서일메디컬 노출 있음)
@@ -157,6 +159,19 @@ pages:
               volume: 1,340
               exposure: ● 노출
               note: 블로그 상위노출
+        - type: callout
+          variant: positive
+          title: 현황
+          items:
+            - 재건성형 핵심 키워드 4개 모두 블로그 상위노출 달성
+            - 월 검색량 합계 9,230건 → 유지 및 강화 필요
+
+  - page: 6
+    type: content
+    data:
+      section: 2. 바이럴 키워드 노출 현황 분석
+      subtitle: 미용성형 키워드
+      blocks:
         - type: table
           title: 부산 지역 미용성형 키워드 (서일메디컬 노출 없음)
           columns:
@@ -187,13 +202,14 @@ pages:
               exposure: ✕ 미노출
               competitor: 하늘성형외과, 갤럭시성형외과
         - type: callout
-          variant: insight
-          title: 시사점
+          variant: warning
+          title: 문제점
           items:
-            - "재건성형: 일부 키워드 노출 → 유지 및 강화 필요"
-            - "미용성형: 부산 지역 키워드 점유율 0% → 신규 진입 필요"
+            - 부산 지역 미용성형 키워드 점유율 0%
             - 경쟁사(하늘성형외과)가 대부분의 키워드 상위 점유 중
-  - page: 6
+            - 월 검색량 8,500건 시장 → 신규 진입 전략 필요
+
+  - page: 7
     type: content
     data:
       section: 3. 경쟁사 분석 - 경쟁 구도 개요
@@ -228,7 +244,7 @@ pages:
           items:
             - "재건성형: 대학병원급 전문성 + 개인병원 접근성 → 차별화 가능"
             - "미용성형: 온라인 노출 0% → 신규 진입 전략 필요"
-  - page: 7
+  - page: 8
     type: content
     data:
       section: 3.2 재건성형 경쟁사 분석 - 대학병원
@@ -291,7 +307,7 @@ pages:
               - status: full
                 text: 재건+미용 통합 → 원스톱 진료
               - text: → 대학병원 온라인 소극적 = 키워드 선점 기회
-  - page: 8
+  - page: 9
     type: content
     data:
       section: 3.3 미용성형 경쟁사 분석 - 부산 지역
@@ -372,7 +388,7 @@ pages:
           variant: warning
           title: 서일메디컬 현황
           content: "채널 수: 1 / 전후사진: ✕ / 점유율: 0% → 다채널 전략 + 콘텐츠 차별화 필요"
-  - page: 9
+  - page: 10
     type: content
     data:
       section: 3.4 서일메디컬 현황 진단
@@ -459,7 +475,7 @@ pages:
                 - label: 갤럭시
                   value: 60
           insight: 실력은 최상위권이나 온라인에서 알려지지 않음
-  - page: 10
+  - page: 11
     type: content
     data:
       section: 4. 포지셔닝 분석 - 재건성형 시장
@@ -509,7 +525,7 @@ pages:
             - 부산대 교수 출신 → 대학병원급 기술력 어필 가능
             - 빠른 예약, 개인 맞춤 상담 → 대학병원 대비 차별화
             - 대학병원들 온라인 마케팅 소극적 → 키워드 선점 기회
-  - page: 11
+  - page: 12
     type: content
     data:
       section: 4. 포지셔닝 분석 - 미용성형 시장 (부산 지역)
@@ -559,7 +575,7 @@ pages:
             - "\"재건+미용 결합\" 포지셔닝으로 차별화 (재건 기술력 = 미용 품질 신뢰)"
             - 지식인/언론보도 통해 전문성·안전성 메시지 우선 확산
             - "중장기: 전후사진 확보 후 본격적인 점유율 경쟁 진입"
-  - page: 12
+  - page: 13
     type: content
     data:
       section: 5. 핵심 문제점 진단
