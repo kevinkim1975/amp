@@ -60,7 +60,7 @@ const chartData: readonly ChartCategory[] = [
 export function Section10bSeoilGap() {
   return (
     <section className="w-full bg-background py-6">
-      {/* Design Guide 준수: max-w-content (1280px), min-h로 화면 채우기 */}
+      {/* Design Guide 준수: max-w-content (1280px), 콘텐츠 크기에 맞춤 (빈 공간 제거) */}
       <div className="mx-auto max-w-content px-6 min-h-[calc(100vh-144px)] flex flex-col">
         {/* Section Header - 압축 */}
         <div className="text-center mb-4">
@@ -87,51 +87,49 @@ export function Section10bSeoilGap() {
           </div>
         </div>
 
-        {/* Gap Chart - 공간 최적화 (flex-1 중첩 제거, 공간 분배 개선) */}
-        <div className="flex-1 flex flex-col justify-between">
-          <div className="bg-background border border-border rounded-lg p-5 shadow-card">
-            <h3 className="text-lg font-semibold text-text-primary mb-4">
-              실제 경쟁력 vs 온라인 인지도 격차
-            </h3>
+        {/* Gap Chart - 공간 최적화 (차트와 인사이트를 하나의 카드로 통합) */}
+        <div className="bg-background border border-border rounded-lg p-5 shadow-card">
+          <h3 className="text-lg font-semibold text-text-primary mb-4">
+            실제 경쟁력 vs 온라인 인지도 격차
+          </h3>
 
-            {/* 차트 영역 - 간격 최적화 */}
-            <div className="space-y-5">
-              {chartData.map((category) => (
-                <div key={category.name}>
-                  <p className="text-sm font-semibold text-text-secondary mb-2.5">
-                    {category.name}
-                  </p>
-                  <div className="space-y-2">
-                    {category.items.map((item) => (
-                      <div key={`${category.name}-${item.label}`} className="flex items-center gap-3">
-                        <span className="w-24 text-sm font-medium text-text-primary shrink-0">
-                          {item.label}
-                        </span>
-                        <div className="flex-1 bg-surface rounded-full h-6 overflow-hidden">
-                          <div
-                            className={`h-full ${item.color} rounded-full flex items-center justify-end pr-2`}
-                            style={{ width: `${item.value}%` }}
-                            role="progressbar"
-                            aria-valuenow={item.value}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            aria-label={`${item.label}: ${item.value}점`}
-                          >
-                            <span className="text-xs text-white font-semibold">
-                              {item.value}
-                            </span>
-                          </div>
+          {/* 차트 영역 - 간격 최적화 */}
+          <div className="space-y-4">
+            {chartData.map((category) => (
+              <div key={category.name}>
+                <p className="text-sm font-semibold text-text-secondary mb-2">
+                  {category.name}
+                </p>
+                <div className="space-y-2">
+                  {category.items.map((item) => (
+                    <div key={`${category.name}-${item.label}`} className="flex items-center gap-3">
+                      <span className="w-24 text-sm font-medium text-text-primary shrink-0">
+                        {item.label}
+                      </span>
+                      <div className="flex-1 bg-surface rounded-full h-6 overflow-hidden">
+                        <div
+                          className={`h-full ${item.color} rounded-full flex items-center justify-end pr-2`}
+                          style={{ width: `${item.value}%` }}
+                          role="progressbar"
+                          aria-valuenow={item.value}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                          aria-label={`${item.label}: ${item.value}점`}
+                        >
+                          <span className="text-xs text-white font-semibold">
+                            {item.value}
+                          </span>
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* 핵심 인사이트 - 차트와 연결 (빈 공간 제거) */}
-          <div className="mt-4 p-4 bg-surface rounded-lg border border-border">
+          {/* 핵심 인사이트 - 차트 카드 내부에 통합 (빈 공간 완전 제거) */}
+          <div className="mt-4 pt-4 border-t border-border">
             <p className="text-center text-base font-semibold text-primary">
               실력은 최상위권이나 온라인에서 알려지지 않음
             </p>
