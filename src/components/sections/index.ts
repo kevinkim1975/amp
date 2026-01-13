@@ -2,7 +2,7 @@
  * 섹션 컴포넌트 배럴 내보내기
  * Boris Cherny 원칙: 깔끔한 import 경로
  *
- * 업데이트: 2026-01-13 - 19페이지 확장 (파일명/export명 일치)
+ * 업데이트: 2026-01-13 - 20페이지 확장 (Section10 분리)
  */
 
 export { SectionContainer } from './SectionContainer';
@@ -17,6 +17,7 @@ export { Section08Cosmetic } from './Section08Cosmetic';
 export { Section08bCosmeticSummary } from './Section08bCosmeticSummary';
 export { Section09CosmeticComparison } from './Section09CosmeticComparison';
 export { Section10SeoilDiagnosis } from './Section10SeoilDiagnosis';
+export { Section10bSeoilGap } from './Section10bSeoilGap';
 export { Section11PositioningReconstruction } from './Section11PositioningReconstruction';
 export { Section12PositioningCosmetic } from './Section12PositioningCosmetic';
 export { Section13Problems } from './Section13Problems';

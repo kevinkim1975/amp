@@ -2,7 +2,7 @@
  * 서일메디컬 마케팅 제안서 - 타입 정의
  * Boris Cherny 원칙: 타입을 먼저 정의하고, 구현은 그 다음
  * 
- * 변경: 2026-01-13 - 18페이지 → 19페이지 (Section08 분리)
+ * 변경: 2026-01-13 - 19페이지 → 20페이지 (Section10 분리)
  */
 
 // ============================================
@@ -12,11 +12,11 @@
 /** 섹션 타입 - Discriminated Union */
 export type SectionType = 'cover' | 'toc' | 'content' | 'closing';
 
-/** 섹션 ID - 1부터 19까지 */
-export type SectionId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19;
+/** 섹션 ID - 1부터 20까지 */
+export type SectionId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20;
 
 /** 총 섹션 수 - Literal Type */
-export type TotalSections = 19;
+export type TotalSections = 20;
 
 // ============================================
 // 2. 섹션 인터페이스
@@ -68,7 +68,7 @@ export interface SectionProps {
 // 5. 상수 데이터 (as const)
 // ============================================
 
-/** 19개 섹션 정의 (YAML 데이터와 동기화) */
+/** 20개 섹션 정의 (YAML 데이터와 동기화) */
 export const SECTIONS: readonly Section[] = [
   { id: 1, type: 'cover', title: '표지' },
   { id: 2, type: 'toc', title: '목차' },
@@ -80,16 +80,17 @@ export const SECTIONS: readonly Section[] = [
   { id: 8, type: 'content', title: '3.3 미용성형 경쟁사 분석' },
   { id: 9, type: 'content', title: '3.3 미용성형 경쟁사 비교 분석' },
   { id: 10, type: 'content', title: '3.4 서일메디컬 현황 진단' },
-  { id: 11, type: 'content', title: '4. 포지셔닝 분석 - 재건성형' },
-  { id: 12, type: 'content', title: '4. 포지셔닝 분석 - 미용성형' },
-  { id: 13, type: 'content', title: '5. 핵심 문제점 진단' },
-  { id: 14, type: 'content', title: '6. 전략 제안 - 전후사진 확보' },
-  { id: 15, type: 'content', title: '6. 전략 제안 - 채널별 전략' },
-  { id: 16, type: 'content', title: '7. 마케팅 예산안' },
-  { id: 17, type: 'content', title: '8. 향후 확장 방향' },
-  { id: 18, type: 'content', title: '9. 요약 및 권장사항' },
-  { id: 19, type: 'closing', title: '감사합니다' },
+  { id: 11, type: 'content', title: '3.4 서일메디컬 경쟁력 격차' },
+  { id: 12, type: 'content', title: '4. 포지셔닝 분석 - 재건성형' },
+  { id: 13, type: 'content', title: '4. 포지셔닝 분석 - 미용성형' },
+  { id: 14, type: 'content', title: '5. 핵심 문제점 진단' },
+  { id: 15, type: 'content', title: '6. 전략 제안 - 전후사진 확보' },
+  { id: 16, type: 'content', title: '6. 전략 제안 - 채널별 전략' },
+  { id: 17, type: 'content', title: '7. 마케팅 예산안' },
+  { id: 18, type: 'content', title: '8. 향후 확장 방향' },
+  { id: 19, type: 'content', title: '9. 요약 및 권장사항' },
+  { id: 20, type: 'closing', title: '감사합니다' },
 ] as const;
 
 /** 총 섹션 수 */
-export const TOTAL_SECTIONS: TotalSections = 19;
+export const TOTAL_SECTIONS: TotalSections = 20;

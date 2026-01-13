@@ -2,7 +2,7 @@
  * SectionContainer - 섹션 컨테이너
  * Boris Cherny 원칙: 섹션 ID에 따라 해당 콘텐츠 컴포넌트 렌더링
  *
- * 변경: 2026-01-13 - 19페이지 확장 (Section08 분리)
+ * 변경: 2026-01-13 - 20페이지 확장 (Section10 분리)
  */
 
 import React from 'react';
@@ -18,6 +18,7 @@ import { Section07Reconstruction } from './Section07Reconstruction';
 import { Section08Cosmetic } from './Section08Cosmetic';
 import { Section08bCosmeticSummary } from './Section08bCosmeticSummary';
 import { Section10SeoilDiagnosis } from './Section10SeoilDiagnosis';
+import { Section10bSeoilGap } from './Section10bSeoilGap';
 import { Section11PositioningReconstruction } from './Section11PositioningReconstruction';
 import { Section12PositioningCosmetic } from './Section12PositioningCosmetic';
 import { Section13Problems } from './Section13Problems';
@@ -62,7 +63,7 @@ const Placeholder = ({ section }: SectionProps) => {
 };
 
 
-/** 섹션 ID별 컴포넌트 매핑 (19페이지) */
+/** 섹션 ID별 컴포넌트 매핑 (20페이지) */
 const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   1: Section01Cover,
   2: Section02TOC,
@@ -72,17 +73,18 @@ const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   6: Section06Competition,
   7: Section07Reconstruction,
   8: Section08Cosmetic,
-  9: Section08bCosmeticSummary,  // 분리: 비교 테이블 + 서일 현황
-  10: Section10SeoilDiagnosis,
-  11: Section11PositioningReconstruction,
-  12: Section12PositioningCosmetic,
-  13: Section13Problems,
-  14: Section14PhotoStrategy,
-  15: Section15ChannelStrategy,
-  16: Section16Budget,
-  17: Section17Expansion,
-  18: Section18Summary,
-  19: Section19Closing,
+  9: Section08bCosmeticSummary,
+  10: Section10SeoilDiagnosis,  // 보유자산 vs 온라인노출
+  11: Section10bSeoilGap,        // 경쟁력 격차 차트 (신규)
+  12: Section11PositioningReconstruction,
+  13: Section12PositioningCosmetic,
+  14: Section13Problems,
+  15: Section14PhotoStrategy,
+  16: Section15ChannelStrategy,
+  17: Section16Budget,
+  18: Section17Expansion,
+  19: Section18Summary,
+  20: Section19Closing,
 };
 
 export const SectionContainer = React.forwardRef<HTMLElement, SectionProps>(
