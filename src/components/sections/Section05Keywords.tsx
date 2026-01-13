@@ -3,8 +3,10 @@
  * Design Guide (docs/design-guide.md) 기반
  * 
  * 생성: 2026-01-13
- * 30년차 디자이너 원칙: 스크롤 없이 한 화면에 모든 정보 표시
- * 레이아웃: 테이블 2개 가로 배치 + 하단 Callout
+ * 개선: 30년차 디자이너 레이아웃 최적화
+ * - 상단 정렬로 빈 공간 제거
+ * - 테이블 폰트 크기 증가 (xs → sm)
+ * - 여백 최적화로 시각적 밀도 향상
  * 
  * 데이터 소스: data/seoil-medical.yaml (page 5)
  */
@@ -81,33 +83,33 @@ const keywordsData: KeywordsData = {
 // Sub-Components
 // ============================================================================
 
-/** 키워드 테이블 컴포넌트 */
+/** 키워드 테이블 컴포넌트 - 개선된 버전 */
 function KeywordTable({ table }: { readonly table: KeywordTable }) {
   const isPositive = table.isPositive;
   
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col">
       {/* 테이블 제목 */}
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex items-center gap-2 mb-3">
         <span 
-          className={`w-2 h-2 rounded-full ${isPositive ? 'bg-accent' : 'bg-red-500'}`}
+          className={`w-3 h-3 rounded-full ${isPositive ? 'bg-accent' : 'bg-red-500'}`}
           aria-hidden="true"
         />
-        <h3 className="text-sm font-semibold text-text-primary">
+        <h3 className="text-base font-semibold text-text-primary">
           {table.title}
         </h3>
       </div>
       
-      {/* 테이블 */}
-      <div className="bg-surface border border-border rounded-lg overflow-hidden flex-1">
-        <table className="w-full text-xs" role="table">
+      {/* 테이블 - 크기 및 여백 개선 */}
+      <div className="bg-surface border border-border rounded-lg overflow-hidden shadow-sm">
+        <table className="w-full text-sm" role="table">
           <thead>
-            <tr className="bg-primary/5">
+            <tr className="bg-primary/10">
               {table.columns.map((col, idx) => (
                 <th
                   key={col}
                   scope="col"
-                  className={`py-2 px-3 font-semibold text-primary ${
+                  className={`py-3 px-4 font-semibold text-primary ${
                     idx === 1 ? 'text-right' : 'text-left'
                   }`}
                 >
@@ -120,22 +122,22 @@ function KeywordTable({ table }: { readonly table: KeywordTable }) {
             {table.rows.map((row, index) => (
               <tr
                 key={row.keyword}
-                className={`border-t border-border ${
+                className={`border-t border-border hover:bg-primary/5 transition-colors ${
                   index % 2 === 1 ? 'bg-surface/50' : 'bg-background'
                 }`}
               >
-                <td className="py-2 px-3 font-medium text-text-primary">
+                <td className="py-3 px-4 font-medium text-text-primary">
                   {row.keyword}
                 </td>
-                <td className="py-2 px-3 text-right font-mono text-text-primary">
+                <td className="py-3 px-4 text-right font-mono text-text-primary">
                   {row.volume}
                 </td>
-                <td className="py-2 px-3">
-                  <span className={`font-medium ${isPositive ? 'text-accent' : 'text-red-500'}`}>
+                <td className="py-3 px-4">
+                  <span className={`font-semibold ${isPositive ? 'text-accent' : 'text-red-500'}`}>
                     {row.exposure}
                   </span>
                 </td>
-                <td className="py-2 px-3 text-text-secondary">
+                <td className="py-3 px-4 text-text-secondary">
                   {row.note || row.competitor}
                 </td>
               </tr>
@@ -155,42 +157,43 @@ export function Section05Keywords() {
   const data = keywordsData;
 
   return (
-    <section className="w-full bg-background py-6">
-      <div className="mx-auto max-w-content px-6 min-h-[calc(100vh-144px)] flex flex-col">
-        {/* Section Header */}
-        <div className="text-center mb-4">
-          <h2 className="text-heading-2 text-primary mb-1">
+    <section className="w-full bg-background py-8">
+      {/* 상단 정렬, justify-center 제거로 빈 공간 해결 */}
+      <div className="mx-auto max-w-content px-6">
+        {/* Section Header - 여백 축소 */}
+        <div className="text-center mb-8">
+          <h2 className="text-heading-2 text-primary mb-2">
             {data.section}
           </h2>
           <div 
-            className="mx-auto w-16 h-0.5 bg-gradient-to-r from-primary to-secondary" 
+            className="mx-auto w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full" 
             aria-hidden="true"
           />
         </div>
 
-        {/* 2열 테이블 그리드 */}
-        <div className="flex-1 flex flex-col justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-            {data.tables.map((table) => (
-              <KeywordTable key={table.title} table={table} />
-            ))}
-          </div>
+        {/* 2열 테이블 그리드 - gap 증가 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          {data.tables.map((table) => (
+            <KeywordTable key={table.title} table={table} />
+          ))}
+        </div>
 
-          {/* Callout: 시사점 */}
-          <div className="p-4 bg-surface border-l-4 border-primary rounded-r-lg">
-            <div className="flex items-center gap-2 mb-2">
-              <Lightbulb className="text-primary" size={18} strokeWidth={1.5} />
-              <h3 className="text-sm font-semibold text-text-primary">시사점</h3>
+        {/* Callout: 시사점 - 패딩 및 폰트 크기 증가 */}
+        <div className="p-6 bg-gradient-to-r from-surface to-background border-l-4 border-primary rounded-r-lg shadow-sm">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <Lightbulb className="text-primary" size={22} strokeWidth={1.5} />
             </div>
-            <ul className="space-y-1">
-              {data.insights.map((insight, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm text-text-primary">
-                  <span className="text-primary mt-0.5">•</span>
-                  <span>{insight.text}</span>
-                </li>
-              ))}
-            </ul>
+            <h3 className="text-lg font-semibold text-text-primary">시사점</h3>
           </div>
+          <ul className="space-y-3">
+            {data.insights.map((insight, index) => (
+              <li key={index} className="flex items-start gap-3 text-base text-text-primary">
+                <span className="text-primary font-bold mt-0.5">•</span>
+                <span>{insight.text}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

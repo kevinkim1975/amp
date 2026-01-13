@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: Add Section07-17 components \\(complete all sections\\)\n\n- Section07: 재건성형 경쟁사 분석 \\(대학병원\\)\n- Section08: 미용성형 경쟁사 분석 \\(부산 지역\\)\n- Section09: 서일메디컬 현황 진단\n- Section10: 포지셔닝 분석 \\(재건성형\\)\n- Section11: 포지셔닝 분석 \\(미용성형\\)\n- Section12: 핵심 문제점 진단\n- Section13: 전략 제안 - 전후사진 확보\n- Section14: 전략 제안 - 채널별 전략\n- Section15: 마케팅 예산안\n- Section16: 향후 확장 방향\n- Section17: 요약 및 권장사항\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
+    ]
+  }
+}
