@@ -54,9 +54,9 @@ const strategyItems: readonly string[] = [
 
 export function Section12PositioningCosmetic() {
   return (
-    <section className="w-full bg-background py-4">
+    <section className="w-full bg-background py-6">
       {/* Design Guide 준수: max-w-content (1280px), 콘텐츠 크기에 맞춤 */}
-      <div className="mx-auto max-w-content px-6">
+      <div className="mx-auto max-w-content px-6 min-h-[calc(100vh-144px)] flex flex-col justify-start">
         {/* Section Header - 압축 */}
         <div className="text-center mb-4">
           <h2 className="text-heading-2 text-primary mb-1">
@@ -138,34 +138,39 @@ export function Section12PositioningCosmetic() {
               {/* 목표 위치: x:80, y:50 → left: 80%, top: 50% */}
               {/* 화살표는 현재 위치에서 시작하여 목표 박스 왼쪽 가장자리에 정확히 닿도록 */}
               <svg
-                className="absolute inset-0 z-10"
-                style={{ pointerEvents: 'none' }}
+                className="absolute z-10"
+                style={{
+                  left: '30%',
+                  top: '95%',
+                  width: '50%',
+                  height: '45%',
+                  transform: 'translate(-50%, -50%)',
+                }}
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"
               >
                 <defs>
                   <marker
                     id="arrowhead-cosmetic"
-                    markerWidth="10"
-                    markerHeight="8"
-                    refX="9"
-                    refY="4"
+                    markerWidth="8"
+                    markerHeight="6"
+                    refX="7"
+                    refY="3"
                     orient="auto"
                   >
-                    <polygon points="0 0, 10 4, 0 8" fill="currentColor" />
+                    <polygon points="0 0, 8 3, 0 6" fill="#10B981" />
                   </marker>
                 </defs>
-                {/* 화살표 경로: 현재(30, 95)에서 목표(80, 50)로 */}
-                {/* 목표 박스는 원점에서 +12px 오프셋이므로, 화살표 끝점을 약간 앞당김 */}
-                {/* 퍼센트 기준: 목표 위치에서 약 2-3% 앞당김 */}
+                {/* 화살표 경로: 현재(0, 100)에서 목표(100, 0)로 */}
+                {/* 목표 박스는 원점에서 오른쪽으로 약 12px 오프셋이므로, 화살표 끝점을 약간 앞당김 */}
+                {/* viewBox 기준: 목표(100, 0)에서 약 4% 앞당김 → (96, 4) */}
                 <path
-                  d="M 30 95 Q 55 72.5 77 52"
-                  stroke="currentColor"
-                  strokeWidth="0.2"
+                  d="M 0 100 Q 50 50 96 4"
+                  stroke="#10B981"
+                  strokeWidth="2"
                   fill="none"
                   markerEnd="url(#arrowhead-cosmetic)"
-                  strokeDasharray="0.4,0.3"
-                  className="text-accent"
+                  strokeDasharray="4,3"
                 />
               </svg>
 
@@ -191,8 +196,8 @@ export function Section12PositioningCosmetic() {
             </div>
           </div>
 
-          {/* Insight Callout - 차트 바로 아래 연결 (하단 여백 최소화) */}
-          <div className="mt-2 p-4 bg-surface border-l-4 border-primary rounded-r-lg">
+          {/* Insight Callout - 차트 바로 아래 연결 (적절한 간격 유지) */}
+          <div className="mt-3 p-4 bg-surface border-l-4 border-primary rounded-r-lg">
             <div className="flex gap-3">
               <Lightbulb className="text-primary flex-shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
               <div className="flex-1">
