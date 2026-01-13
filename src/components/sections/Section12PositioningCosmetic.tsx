@@ -137,10 +137,11 @@ export function Section12PositioningCosmetic() {
               {/* 현재 위치: x:30, y:5 → left: 30%, top: 95% */}
               {/* 목표 위치: x:80, y:50 → left: 80%, top: 50% */}
               {/* 화살표는 현재 위치에서 시작하여 목표 박스 왼쪽 가장자리에 정확히 닿도록 */}
+              {/* 화살표를 오른쪽으로 100px 이동 */}
               <svg
                 className="absolute z-10"
                 style={{
-                  left: '30%',
+                  left: 'calc(30% + 100px)',
                   top: '95%',
                   width: '50%',
                   height: '45%',
