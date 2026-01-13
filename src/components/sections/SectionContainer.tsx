@@ -82,6 +82,7 @@ const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   16: Section16Budget,
   17: Section17Expansion,
   18: Section18Summary,
+  19: Section19Closing,
 };
 
 export const SectionContainer = React.forwardRef<HTMLElement, SectionProps>(
