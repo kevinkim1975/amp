@@ -133,7 +133,11 @@ export function Section12PositioningCosmetic() {
                 )
               })}
 
-              {/* Arrow from current to target */}
+              {/* Arrow from current to target - 정확한 위치 계산 */}
+              {/* 현재 위치: x:30, y:5 → left: 30%, top: 95% */}
+              {/* 목표 위치: x:80, y:50 → left: 80%, top: 50% */}
+              {/* 화살표는 현재 위치에서 시작하여 목표 박스 가장자리에 정확히 닿도록 */}
+              {/* SVG 위치: 현재 위치를 기준으로 시작, 목표 위치까지의 거리만큼 width/height 설정 */}
               <svg
                 className="absolute z-10"
                 style={{
@@ -149,17 +153,19 @@ export function Section12PositioningCosmetic() {
                 <defs>
                   <marker
                     id="arrowhead-cosmetic"
-                    markerWidth="8"
-                    markerHeight="6"
-                    refX="7"
-                    refY="3"
+                    markerWidth="10"
+                    markerHeight="8"
+                    refX="9"
+                    refY="4"
                     orient="auto"
                   >
-                    <polygon points="0 0, 8 3, 0 6" fill="currentColor" />
+                    <polygon points="0 0, 10 4, 0 8" fill="currentColor" />
                   </marker>
                 </defs>
+                {/* 화살표 경로: 현재(0, 100)에서 목표(100, 0)로 */}
+                {/* 목표 박스 크기 고려하여 화살표 끝점을 약간 앞당김 (박스 가장자리에 닿도록) */}
                 <path
-                  d="M0,90 Q50,50 100,5"
+                  d="M 0 100 Q 50 50 96 4"
                   stroke="currentColor"
                   strokeWidth="2"
                   fill="none"
