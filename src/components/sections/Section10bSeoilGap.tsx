@@ -87,20 +87,21 @@ export function Section10bSeoilGap() {
           </div>
         </div>
 
-        {/* Gap Chart - 공간 최적화 */}
-        <div className="flex-1 flex flex-col">
-          <div className="bg-background border border-border rounded-lg p-5 shadow-card flex-1 flex flex-col">
+        {/* Gap Chart - 공간 최적화 (flex-1 중첩 제거, 공간 분배 개선) */}
+        <div className="flex-1 flex flex-col justify-between">
+          <div className="bg-background border border-border rounded-lg p-5 shadow-card">
             <h3 className="text-lg font-semibold text-text-primary mb-4">
               실제 경쟁력 vs 온라인 인지도 격차
             </h3>
 
-            <div className="space-y-6 flex-1">
+            {/* 차트 영역 - 간격 최적화 */}
+            <div className="space-y-5">
               {chartData.map((category) => (
                 <div key={category.name}>
-                  <p className="text-sm font-semibold text-text-secondary mb-3">
+                  <p className="text-sm font-semibold text-text-secondary mb-2.5">
                     {category.name}
                   </p>
-                  <div className="space-y-2.5">
+                  <div className="space-y-2">
                     {category.items.map((item) => (
                       <div key={`${category.name}-${item.label}`} className="flex items-center gap-3">
                         <span className="w-24 text-sm font-medium text-text-primary shrink-0">
@@ -127,16 +128,16 @@ export function Section10bSeoilGap() {
                 </div>
               ))}
             </div>
+          </div>
 
-            {/* 핵심 인사이트 - 압축 */}
-            <div className="mt-4 p-4 bg-surface rounded-lg border border-border">
-              <p className="text-center text-base font-semibold text-primary">
-                실력은 최상위권이나 온라인에서 알려지지 않음
-              </p>
-              <p className="text-center text-sm text-text-secondary mt-1">
-                → 온라인 마케팅 강화로 인지도 격차 해소 필요
-              </p>
-            </div>
+          {/* 핵심 인사이트 - 차트와 연결 (빈 공간 제거) */}
+          <div className="mt-4 p-4 bg-surface rounded-lg border border-border">
+            <p className="text-center text-base font-semibold text-primary">
+              실력은 최상위권이나 온라인에서 알려지지 않음
+            </p>
+            <p className="text-center text-sm text-text-secondary mt-1">
+              → 온라인 마케팅 강화로 인지도 격차 해소 필요
+            </p>
           </div>
         </div>
       </div>
