@@ -6,7 +6,7 @@
  * 19페이지 확장으로 신규 생성
  */
 
-import { Mail, Phone, MapPin, Building2 } from "lucide-react"
+import { Mail, Phone, Building2 } from "lucide-react"
 
 export function Section19Closing() {
   return (
@@ -25,20 +25,20 @@ export function Section19Closing() {
           감사합니다
         </h1>
         <p className="text-xl text-[#6B7280] mb-12">
-          서일메디컬의 성공적인 마케팅을 함께 만들어 가겠습니다
+          서일메디컬그룹의 발전을 기원합니다
         </p>
 
         {/* Contact Info */}
         <div className="bg-white rounded-2xl shadow-sm border border-[#E5E7EB] p-8 mb-10">
           <h2 className="text-lg font-semibold text-[#1F2937] mb-6">문의 및 상담</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-md mx-auto">
             {/* Phone */}
             <div className="flex flex-col items-center gap-2">
               <div className="w-12 h-12 bg-[#004B8D]/10 rounded-full flex items-center justify-center">
                 <Phone className="w-5 h-5 text-[#004B8D]" />
               </div>
               <p className="text-sm text-[#6B7280]">전화</p>
-              <p className="text-base font-medium text-[#1F2937]">02-1234-5678</p>
+              <p className="text-base font-medium text-[#1F2937]">070-8670-1441</p>
             </div>
 
             {/* Email */}
@@ -47,17 +47,9 @@ export function Section19Closing() {
                 <Mail className="w-5 h-5 text-[#48A9C5]" />
               </div>
               <p className="text-sm text-[#6B7280]">이메일</p>
-              <p className="text-base font-medium text-[#1F2937]">contact@howon.co.kr</p>
+              <p className="text-base font-medium text-[#1F2937]">contact@gncare.co.kr</p>
             </div>
 
-            {/* Address */}
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-[#6B7280]/10 rounded-full flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-[#6B7280]" />
-              </div>
-              <p className="text-sm text-[#6B7280]">주소</p>
-              <p className="text-base font-medium text-[#1F2937]">서울시 강남구</p>
-            </div>
           </div>
         </div>
 
