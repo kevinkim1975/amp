@@ -2,7 +2,7 @@
  * SectionContainer - 섹션 컨테이너
  * Boris Cherny 원칙: 섹션 ID에 따라 해당 콘텐츠 컴포넌트 렌더링
  *
- * 변경: 2026-01-13 - 20페이지 확장 (Section10 분리)
+ * 변경: 2026-01-13 - 21페이지 확장 (Section16 Budget 분리)
  */
 
 import React from 'react';
@@ -24,7 +24,8 @@ import { Section12PositioningCosmetic } from './Section12PositioningCosmetic';
 import { Section13Problems } from './Section13Problems';
 import { Section14PhotoStrategy } from './Section14PhotoStrategy';
 import { Section15ChannelStrategy } from './Section15ChannelStrategy';
-import { Section16Budget } from './Section16Budget';
+import Section16BudgetOptions from './Section16BudgetOptions';
+import Section16BudgetAnalysis from './Section16BudgetAnalysis';
 import { Section17Expansion } from './Section17Expansion';
 import { Section18Summary } from './Section18Summary';
 import { Section19Closing } from './Section19Closing';
@@ -63,7 +64,7 @@ const Placeholder = ({ section }: SectionProps) => {
 };
 
 
-/** 섹션 ID별 컴포넌트 매핑 (20페이지) */
+/** 섹션 ID별 컴포넌트 매핑 (21페이지) */
 const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   1: Section01Cover,
   2: Section02TOC,
@@ -74,17 +75,18 @@ const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   7: Section07Reconstruction,
   8: Section08Cosmetic,
   9: Section08bCosmeticSummary,
-  10: Section10SeoilDiagnosis,  // 보유자산 vs 온라인노출
-  11: Section10bSeoilGap,        // 경쟁력 격차 차트 (신규)
+  10: Section10SeoilDiagnosis,
+  11: Section10bSeoilGap,
   12: Section11PositioningReconstruction,
   13: Section12PositioningCosmetic,
   14: Section13Problems,
   15: Section14PhotoStrategy,
   16: Section15ChannelStrategy,
-  17: Section16Budget,
-  18: Section17Expansion,
-  19: Section18Summary,
-  20: Section19Closing,
+  17: Section16BudgetOptions,    // 예산안 옵션 비교
+  18: Section16BudgetAnalysis,   // 파워링크 효율 분석
+  19: Section17Expansion,
+  20: Section18Summary,
+  21: Section19Closing,
 };
 
 export const SectionContainer = React.forwardRef<HTMLElement, SectionProps>(
