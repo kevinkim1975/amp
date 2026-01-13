@@ -15,15 +15,15 @@ import { AlertTriangle, Lightbulb, Camera, FileText } from "lucide-react"
 export function Section14PhotoStrategy() {
   return (
     <section className="min-h-[calc(100vh-144px)] bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-5">
+      <div className="max-w-7xl mx-auto px-6 py-8">
         {/* Section Header */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-5">
           <h2 className="text-3xl font-semibold text-[#004B8D] mb-2">6. 전략 제안 - 전후사진 확보 전략 (최우선)</h2>
           <div className="mx-auto w-16 h-0.5 bg-gradient-to-r from-[#004B8D] to-[#48A9C5]" />
         </div>
 
         {/* Warning Callout */}
-        <div className="mb-4 p-3 bg-[#FEF2F2] border-l-4 border-[#EF4444] rounded-r-lg">
+        <div className="mb-5 p-3 bg-[#FEF2F2] border-l-4 border-[#EF4444] rounded-r-lg">
           <div className="flex items-center gap-2">
             <AlertTriangle className="text-[#EF4444] flex-shrink-0" size={18} />
             <p className="text-sm text-[#1F2937] font-medium">
@@ -33,14 +33,14 @@ export function Section14PhotoStrategy() {
         </div>
 
         {/* Two Column Strategy */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
           {/* 사진 확보 방안 */}
           <div className="bg-white border border-[#E5E7EB] rounded-md overflow-hidden">
             <div className="bg-[#004B8D] px-4 py-2 flex items-center gap-2">
               <Camera className="text-white" size={16} />
               <h3 className="text-sm font-semibold text-white">사진 확보 방안 (1~3개월)</h3>
             </div>
-            <div className="p-4 space-y-3">
+            <div className="p-5 space-y-4">
               {/* 기존 환자 동의 획득 */}
               <div>
                 <h4 className="text-xs font-semibold text-[#004B8D] mb-1.5">① 기존 환자 동의 획득</h4>
@@ -102,7 +102,7 @@ export function Section14PhotoStrategy() {
               <FileText className="text-white" size={16} />
               <h3 className="text-sm font-semibold text-white">대체 콘텐츠 전략 (사진 확보 전)</h3>
             </div>
-            <div className="p-4 space-y-3">
+            <div className="p-5 space-y-4">
               {/* 시술 과정/원리 설명 콘텐츠 */}
               <div>
                 <h4 className="text-xs font-semibold text-[#48A9C5] mb-1.5">① 시술 과정/원리 설명 콘텐츠</h4>
