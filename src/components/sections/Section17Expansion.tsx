@@ -12,8 +12,8 @@ import { Home, AlertCircle, TrendingUp } from "lucide-react"
 
 export function Section17Expansion() {
   return (
-    <section className="min-h-[calc(100vh-144px)] flex items-center justify-center bg-white">
-      <div className="w-full max-w-7xl px-6">
+    <section className="min-h-[calc(100vh-144px)] bg-white">
+      <div className="w-full max-w-7xl mx-auto px-6 py-6">
         {/* Header */}
         <div className="mb-4">
           <h2 className="text-2xl font-bold text-[#004B8D] mb-2">8. 향후 확장 방향</h2>
