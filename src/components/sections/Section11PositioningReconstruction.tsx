@@ -53,8 +53,8 @@ const strategyItems: readonly string[] = [
 export function Section11PositioningReconstruction() {
   return (
     <section className="w-full bg-background py-6">
-      {/* Design Guide 준수: max-w-content (1280px), min-h로 화면 채우기 */}
-      <div className="mx-auto max-w-content px-6 min-h-[calc(100vh-144px)] flex flex-col">
+      {/* Design Guide 준수: max-w-content (1280px), 콘텐츠 크기에 맞춤 */}
+      <div className="mx-auto max-w-content px-6 min-h-[calc(100vh-144px)] flex flex-col justify-start">
         {/* Section Header - 압축 */}
         <div className="text-center mb-4">
           <h2 className="text-heading-2 text-primary mb-1">
@@ -66,29 +66,30 @@ export function Section11PositioningReconstruction() {
           />
         </div>
 
-        {/* Positioning Map - 공간 최적화 */}
-        <div className="flex-1 flex flex-col">
+        {/* Positioning Map - 공간 최적화 (상단 여백 증가, 하단 여백 제거) */}
+        <div className="flex flex-col">
           <div className="bg-background border border-border rounded-lg p-5 shadow-card">
             <h3 className="text-lg font-semibold text-text-primary mb-4">
               재건성형 시장 포지셔닝 맵
             </h3>
 
-            <div className="relative h-[280px] bg-surface rounded-md overflow-hidden">
+            {/* 차트 컨테이너 - 상단 패딩 추가하여 박스가 잘리지 않도록 */}
+            <div className="relative h-[280px] bg-surface rounded-md pt-12 pb-8 px-8">
               {/* Axis Labels */}
-              <div className="absolute left-2 top-1/2 -translate-y-1/2 -rotate-90 text-sm font-medium text-text-secondary">
+              <div className="absolute left-2 top-1/2 -translate-y-1/2 -rotate-90 text-sm font-medium text-text-secondary z-10">
                 전문성 ↑
               </div>
-              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-sm font-medium text-text-secondary">
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-sm font-medium text-text-secondary z-10">
                 접근성 →
               </div>
 
-              {/* Grid */}
+              {/* Grid - 상단 여백 증가 (부산대병원 박스가 잘리지 않도록) */}
               <div className="absolute inset-8 border border-dashed border-border">
                 <div className="absolute top-1/2 left-0 right-0 border-t border-dashed border-border" />
                 <div className="absolute left-1/2 top-0 bottom-0 border-l border-dashed border-border" />
               </div>
 
-              {/* Positions */}
+              {/* Positions - 단순화된 좌표 계산 */}
               {positions.map((pos) => {
                 const isCurrent = pos.highlight === 'current'
                 const isTarget = pos.highlight === 'target'
@@ -97,7 +98,7 @@ export function Section11PositioningReconstruction() {
                 return (
                   <div
                     key={pos.id}
-                    className="absolute"
+                    className="absolute z-20"
                     style={{
                       left: `${pos.x}%`,
                       top: `${100 - pos.y}%`, // Y축 반전 (위쪽이 높은 값)
@@ -124,12 +125,13 @@ export function Section11PositioningReconstruction() {
 
               {/* Arrow from current to target */}
               <svg
-                className="absolute"
+                className="absolute z-10"
                 style={{
                   left: '75%',
                   top: '35%',
                   width: '10%',
                   height: '15%',
+                  transform: 'translate(-50%, -50%)',
                 }}
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"
@@ -175,7 +177,7 @@ export function Section11PositioningReconstruction() {
             </div>
           </div>
 
-          {/* Insight Callout - 차트 바로 아래 연결 (빈 공간 없음) */}
+          {/* Insight Callout - 차트 바로 아래 연결 (하단 여백 최소화) */}
           <div className="mt-3 p-4 bg-surface border-l-4 border-primary rounded-r-lg">
             <div className="flex gap-3">
               <Lightbulb className="text-primary flex-shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
