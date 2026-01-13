@@ -6,7 +6,7 @@
  * 데이터 소스: data/seoil-medical.yaml (page 13 - 첫번째)
  */
 
-export function Section12Problems() {
+export function Section13Problems() {
   return (
     <section className="min-h-[calc(100vh-144px)] bg-white">
       <div className="max-w-7xl mx-auto px-6 py-12">

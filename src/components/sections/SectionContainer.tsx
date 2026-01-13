@@ -2,7 +2,7 @@
  * SectionContainer - 섹션 컨테이너
  * Boris Cherny 원칙: 섹션 ID에 따라 해당 콘텐츠 컴포넌트 렌더링
  *
- * 변경: 2026-01-13 - Section07-17 추가 (전체 섹션 완성)
+ * 변경: 2026-01-13 - 19페이지 확장 (Section08 분리)
  */
 
 import React from 'react';
@@ -16,15 +16,18 @@ import { Section05Keywords } from './Section05Keywords';
 import { Section06Competition } from './Section06Competition';
 import { Section07Reconstruction } from './Section07Reconstruction';
 import { Section08Cosmetic } from './Section08Cosmetic';
-import { Section09SeoilDiagnosis } from './Section09SeoilDiagnosis';
-import { Section10PositioningReconstruction } from './Section10PositioningReconstruction';
-import { Section11PositioningCosmetic } from './Section11PositioningCosmetic';
-import { Section12Problems } from './Section12Problems';
-import { Section13PhotoStrategy } from './Section13PhotoStrategy';
-import { Section14ChannelStrategy } from './Section14ChannelStrategy';
-import { Section15Budget } from './Section15Budget';
-import { Section16Expansion } from './Section16Expansion';
-import { Section17Summary } from './Section17Summary';
+import { Section08bCosmeticSummary } from './Section08bCosmeticSummary';
+import { Section10SeoilDiagnosis } from './Section10SeoilDiagnosis';
+import { Section11PositioningReconstruction } from './Section11PositioningReconstruction';
+import { Section12PositioningCosmetic } from './Section12PositioningCosmetic';
+import { Section13Problems } from './Section13Problems';
+import { Section14PhotoStrategy } from './Section14PhotoStrategy';
+import { Section15ChannelStrategy } from './Section15ChannelStrategy';
+import { Section16Budget } from './Section16Budget';
+import { Section17Expansion } from './Section17Expansion';
+import { Section18Summary } from './Section18Summary';
+import { Section19Closing } from './Section19Closing';
+
 
 /** 섹션 타입별 한국어 라벨 */
 const TYPE_LABELS: Record<SectionType, string> = {
@@ -58,7 +61,8 @@ const Placeholder = ({ section }: SectionProps) => {
   );
 };
 
-/** 섹션 ID별 컴포넌트 매핑 */
+
+/** 섹션 ID별 컴포넌트 매핑 (19페이지) */
 const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   1: Section01Cover,
   2: Section02TOC,
@@ -68,15 +72,16 @@ const SectionComponents: Partial<Record<number, React.ComponentType>> = {
   6: Section06Competition,
   7: Section07Reconstruction,
   8: Section08Cosmetic,
-  9: Section09SeoilDiagnosis,
-  10: Section10PositioningReconstruction,
-  11: Section11PositioningCosmetic,
-  12: Section12Problems,
-  13: Section13PhotoStrategy,
-  14: Section14ChannelStrategy,
-  15: Section15Budget,
-  16: Section16Expansion,
-  17: Section17Summary,
+  9: Section08bCosmeticSummary,  // 분리: 비교 테이블 + 서일 현황
+  10: Section10SeoilDiagnosis,
+  11: Section11PositioningReconstruction,
+  12: Section12PositioningCosmetic,
+  13: Section13Problems,
+  14: Section14PhotoStrategy,
+  15: Section15ChannelStrategy,
+  16: Section16Budget,
+  17: Section17Expansion,
+  18: Section18Summary,
 };
 
 export const SectionContainer = React.forwardRef<HTMLElement, SectionProps>(

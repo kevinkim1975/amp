@@ -8,7 +8,7 @@
 
 import { Lightbulb } from "lucide-react"
 
-export function Section15Budget() {
+export function Section16Budget() {
   return (
     <section className="min-h-[calc(100vh-144px)] bg-white">
       <div className="max-w-7xl mx-auto px-6 py-12">

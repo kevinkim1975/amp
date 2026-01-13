@@ -8,7 +8,7 @@
 
 import { Lightbulb, Calendar, TrendingUp, Home, AlertCircle } from "lucide-react"
 
-export function Section16Expansion() {
+export function Section17Expansion() {
   return (
     <section className="min-h-[calc(100vh-144px)] bg-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
