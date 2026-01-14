@@ -32,7 +32,7 @@ export default function Section16BudgetOptions() {
             <div className="space-y-2 mb-4 flex-grow text-sm">
               <div className="flex justify-between items-center py-1.5 border-b border-slate-100">
                 <span className="text-slate-700">블로그 20건</span>
-                <span className="font-semibold text-slate-900">150만원</span>
+                <span className="font-semibold text-slate-900">165만원</span>
               </div>
               <div className="flex justify-between items-center py-1.5 border-b border-slate-100">
                 <span className="text-slate-700">지식인 20건</span>
@@ -54,18 +54,18 @@ export default function Section16BudgetOptions() {
 
             {/* Note */}
             <div className="mb-3">
-              <p className="text-xs text-[#48A9C5] italic">* 미이관 시 수수료 13% +32.5만원</p>
+              <p className="text-xs text-[#48A9C5] italic">* 미이관 시 수수료 13%: +32.5만원</p>
             </div>
 
             {/* Total */}
             <div className="bg-gradient-to-r from-[#004B8D] to-[#48A9C5] rounded-xl p-4 mt-auto">
               <div className="flex justify-between items-center mb-1">
                 <span className="text-white font-semibold text-sm">합계</span>
-                <span className="text-white text-xl font-bold">552.6만원</span>
+                <span className="text-white text-xl font-bold">567.6만원</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-white/80 text-xs">미이관 시</span>
-                <span className="text-white text-base font-semibold">585만원</span>
+                <span className="text-white text-base font-semibold">674.4만원</span>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function Section16BudgetOptions() {
             <div className="space-y-2 mb-4 flex-grow text-sm">
               <div className="flex justify-between items-center py-1.5 border-b border-slate-100">
                 <span className="text-slate-700">블로그 20건</span>
-                <span className="font-semibold text-slate-900">150만원</span>
+                <span className="font-semibold text-slate-900">165만원</span>
               </div>
               <div className="flex justify-between items-center py-1.5 border-b border-slate-100">
                 <span className="text-slate-700">지식인 20건</span>
@@ -106,7 +106,7 @@ export default function Section16BudgetOptions() {
             <div className="bg-slate-100 rounded-xl p-4 mt-auto">
               <div className="flex justify-between items-center">
                 <span className="text-slate-700 font-semibold text-sm">합계</span>
-                <span className="text-slate-900 text-xl font-bold">277.6만원</span>
+                <span className="text-slate-900 text-xl font-bold">292.6만원</span>
               </div>
             </div>
           </div>
