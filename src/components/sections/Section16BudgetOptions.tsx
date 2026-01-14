@@ -65,7 +65,7 @@ export default function Section16BudgetOptions() {
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-white/80 text-xs">미이관 시</span>
-                <span className="text-white text-base font-semibold">674.4만원</span>
+                <span className="text-white text-base font-semibold">600.1만원</span>
               </div>
             </div>
           </div>
