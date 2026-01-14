@@ -82,7 +82,7 @@ export function Section18Summary() {
             <div className="bg-[#48A9C5]/5 border-l-4 border-[#48A9C5] p-3 rounded-r-lg">
               <h4 className="font-semibold text-sm text-[#1F2937] mb-1">콘텐츠 마케팅 집중 원할 경우</h4>
               <p className="text-[#48A9C5] text-sm font-medium">
-                → 옵션 2: 바이럴만 (약 278만원)
+                → 옵션 2: 바이럴만 (약 293만원)
               </p>
             </div>
 
