@@ -74,6 +74,10 @@ export default function Section16BudgetAnalysis() {
                 <span className="text-[#48A9C5] font-bold mr-2">→</span>
                 <span>다만, 클릭수 개선과 상관없이 노출 시간은 반드시 개선 확보 가능</span>
               </p>
+              <p className="text-sm text-slate-700 flex items-start">
+                <span className="text-[#48A9C5] font-bold mr-2">→</span>
+                <span>직접운영시 네이버에서 매달 주는 5% 쿠폰은 계산에 포함하지 않았으니 더 효율은 우수</span>
+              </p>
             </div>
           </div>
 
