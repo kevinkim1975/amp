@@ -2,15 +2,21 @@
  * TopbarHeader 컴포넌트
  * Design Guide (docs/design-guide.md) 8. UI 컴포넌트 - 상단바
  * 
- * 구성: 로고 (좌측) + 제목 (중앙) + 목차 버튼 + 페이지 번호 (우측)
+ * 구성: 로고 (좌측) + 제목 (중앙) + 목차 버튼 + 인쇄 버튼 + 페이지 번호 (우측)
  * 배경색: Primary Color (#004B8D)
  * 높이: 64px
  * 텍스트: 흰색, Weight 600
  */
 
 import type { TopbarHeaderProps } from "@/types";
+import { Printer } from "lucide-react";
 
 export function TopbarHeader({ title, progress }: TopbarHeaderProps) {
+  // 인쇄 핸들러: 브라우저 인쇄 다이얼로그 열기
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <header className="fixed top-0 z-50 w-full h-16 bg-primary">
       <div className="mx-auto flex h-full max-w-content items-center justify-between px-6">
@@ -30,7 +36,7 @@ export function TopbarHeader({ title, progress }: TopbarHeaderProps) {
           {title}
         </h1>
 
-        {/* 우측: 목차 버튼 + 페이지 번호 */}
+        {/* 우측: 목차 버튼 + 인쇄 버튼 + 페이지 번호 */}
         <div className="flex items-center gap-4 min-w-[200px] justify-end">
           {/* 목차 버튼 - TocDrawer 연결 예정 */}
           <button 
@@ -38,6 +44,17 @@ export function TopbarHeader({ title, progress }: TopbarHeaderProps) {
             aria-label="목차 열기"
           >
             목차
+          </button>
+
+          {/* 인쇄 버튼 */}
+          <button
+            onClick={handlePrint}
+            className="text-white/80 hover:text-white transition-colors text-sm font-medium flex items-center gap-1.5"
+            aria-label="인쇄하기"
+            title="인쇄하기 (Ctrl+P)"
+          >
+            <Printer size={16} strokeWidth={1.5} />
+            <span className="hidden sm:inline">인쇄</span>
           </button>
           
           {/* 페이지 번호 */}

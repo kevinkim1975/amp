@@ -42,3 +42,85 @@ body {
   background-color: var(--color-background); /* #FFFFFF */
   color: var(--color-text-primary); /* #1F2937 */
 }
+
+/* ============================================================================
+ * Print Styles (@media print)
+ * ============================================================================
+ * 
+ * 목적: 브라우저 인쇄(Ctrl+P) 시 각 섹션이 PDF의 한 페이지씩 차지하도록 설정
+ * 
+ * 규칙:
+ * 1. 헤더/푸터/네비게이션 요소는 인쇄 시 숨김
+ * 2. 각 섹션(section[id^="section-"])에 페이지 브레이크 적용
+ * 3. 마지막 섹션은 브레이크 제거 (불필요한 빈 페이지 방지)
+ * 4. 섹션 내부 요소는 페이지 브레이크 방지 (내용이 잘리지 않도록)
+ * 5. 인쇄 비용 절감을 위한 배경/그림자 제거
+ * 
+ * 브라우저 호환성:
+ * - page-break-* (구식, 넓은 호환성)
+ * - break-* (최신 표준, 병행 사용)
+ */
+
+@media print {
+  /* 1. 불필요한 요소 숨김 (헤더, 푸터, 네비게이션, 버튼) */
+  header,
+  footer,
+  nav,
+  button {
+    display: none !important;
+  }
+
+  /* 2. 메인 콘텐츠 영역 패딩 제거 (인쇄 시 불필요) */
+  main {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* 3. 각 섹션을 PDF의 한 페이지씩 차지하도록 설정 */
+  section[id^="section-"] {
+    /* 페이지 브레이크: 각 섹션 다음에 새 페이지 시작 */
+    page-break-after: always;
+    break-after: page;
+    
+    /* 인쇄 페이지 높이에 맞춤 */
+    min-height: 100vh;
+    
+    /* 인쇄 시 배경색 유지 (선택적, 필요시 주석 해제) */
+    /* -webkit-print-color-adjust: exact; */
+    /* print-color-adjust: exact; */
+  }
+
+  /* 4. 마지막 섹션은 브레이크 제거 (불필요한 빈 페이지 방지) */
+  section[id^="section-"]:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* 5. 섹션 내부 요소는 페이지 브레이크 방지 (내용이 잘리지 않도록) */
+  section[id^="section-"] > * {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* 6. 인쇄 비용 절감: 불필요한 배경/그림자 제거 */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* 7. 인쇄 최적화: 페이지 여백 설정 (브라우저 기본값 사용) */
+  @page {
+    margin: 1cm;
+  }
+
+  /* 8. 스크롤 관련 스타일 제거 */
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* 9. 고정 위치 요소 제거 (인쇄 시 불필요) */
+  .fixed,
+  .sticky {
+    position: static !important;
+  }
+}
